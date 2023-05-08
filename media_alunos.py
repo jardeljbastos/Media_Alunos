@@ -12,3 +12,19 @@ if media >= 5:
 elif media <5:
     print(f"""Sua média final é: {media}
     Se dedique para revisar os conteúdos e realizar o Exame!!!""")
+    examefeito = input("""Digite S para sim, se você já realizou o Exame
+    Digite N caso ainda não tenha realizado Exame
+    """)
+if examefeito =="S" or examefeito =="s":
+        notaexame = input("Digite sua nota obtida no Exame: ")
+        mediafinal = (media + float(notaexame)) / 2
+        if mediafinal >= 5:
+            print(f"""Sua média com exame é: {mediafinal}
+            Parabéns, você foi aprovado no Exame!!!""")
+        elif mediafinal <5:
+            print(f"""Sua média com exame é: {mediafinal}
+            Você deverá realizar a disciplina em Dependência!""")
+elif examefeito == "N" or examefeito == "n":
+        print("Bons estudos, se dedique que conseguirá um ótimo resultado!")
+else:
+        print("Você deveria ter digitado S / N")
